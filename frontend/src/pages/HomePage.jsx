@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import Presentation from '../components/common/home/presentation';
+import Presentation from '../components/common/home/Presentation';
 import Skills from '../components/common/home/Skills/Skills';
 import Certifications from '../components/common/home/certifications/Certifications';
 import Projects from '../components/common/projects/Projects';
