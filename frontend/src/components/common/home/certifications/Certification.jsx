@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Certification = ({image, title, text}) => {
+const Certification = ({image, title, text, icons}) => {
   return (
     
 
@@ -25,6 +25,9 @@ const Certification = ({image, title, text}) => {
                 </div>
                 <div className='text-xl abel'>
                     {text}
+                </div>
+                <div className='flex gap-3 my-3 text-3xl'>
+                    {icons}
                 </div>
             </div>
 

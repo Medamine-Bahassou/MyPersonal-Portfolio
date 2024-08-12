@@ -3,13 +3,15 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 
+import photo from "../../../assets/logo/Photo.png"
+
 const Presentation = () => {
   return (
     
     <div className="flex flex-col justify-center min-h-screen overflow-auto  ">
         <div className="hero-content flex-col lg:flex-row-reverse ">
             <img
-            src="https://medamine-bahassou.github.io/img/Photo.png"
+            src={photo}
             className="max-w-sm rounded-sm shadow-2xl " />
             <div>
             <h1 className="text-7xl bebasnue">Mohamed Amine BAHASSOU</h1>
