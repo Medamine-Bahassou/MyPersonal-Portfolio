@@ -3,9 +3,8 @@ import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import NavBar from './components/common/navbar/NavBar'
-import Footer from './components/common/footer/footer'
 import { motion, useScroll, useSpring } from "framer-motion"
-
+import Footer from "./components/common/footer/Footer"
 
 function App() {
   const { scrollYProgress } = useScroll();
