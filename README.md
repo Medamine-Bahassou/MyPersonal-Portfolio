@@ -1,5 +1,4 @@
 # Portfolio
-* Visite the portfolio from here
-
-  [![click](https://github.com/user-attachments/assets/76bc437e-150f-4226-8cdf-80b4cd992cb1)](https://mohamedaminebahassou.onrender.com/)
+* Visite the portfolio from here :
+https://mohamedaminebahassou.onrender.com
 
