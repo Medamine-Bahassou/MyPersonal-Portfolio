@@ -9,10 +9,10 @@ const Presentation = () => {
   return (
     
     <div className="flex flex-col justify-center min-h-screen overflow-auto  ">
-        <div className="hero-content flex-col lg:flex-row-reverse ">
+        <div className="hero-content flex-col lg:flex-row-reverse md:gap-28 ">
             <img
             src={photo}
-            className="max-w-sm rounded-sm shadow-2xl " />
+            className="max-w-xs rounded-sm shadow-2xl " />
             <div>
             <h1 className="text-7xl bebasnue">Mohamed Amine BAHASSOU</h1>
             <p className="py-6 text-xl abel font-medium">

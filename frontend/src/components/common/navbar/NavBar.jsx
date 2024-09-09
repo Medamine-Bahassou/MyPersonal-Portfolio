@@ -1,15 +1,62 @@
 import React from 'react'
 import "../../../App.css"
+import logo from "../../../assets/logo/logo1.png"
+import toast from 'react-hot-toast';
+import { FaProjectDiagram } from "react-icons/fa";
+import { RiHome6Fill  } from "react-icons/ri";
+import { IoSettings } from "react-icons/io5";
+import { PiCertificateFill } from "react-icons/pi";
+import { FaNewspaper } from "react-icons/fa6";
 
 const NavBar = () => {
 
 
+    const handleBlog = ()=>{
+        toast('Comming soon ...', {
+            icon: '📣',
+          });
+    }
+
+    const handleClick = (section) => {
+        // First, remove the "active" class from all elements that may have it
+        const allSections = document.querySelectorAll('.active');
+        allSections.forEach(el => el.classList.remove('active'));
+    
+        if (section === "projects") {
+            const projectElement = document.getElementById('projects-section');
+            if (projectElement) {
+                projectElement.classList.add('active');
+            }
+        }
+        else if (section === "certifications") {
+            const certificationsElement = document.getElementById('certifications-section');
+            if (certificationsElement) {
+                certificationsElement.classList.add('active');
+            }
+        }
+        else if (section === "skills") {
+            const skillsElement = document.getElementById('skills-section');
+            if (skillsElement) {
+                skillsElement.classList.add('active');
+            }
+        }
+        else if (section === "home") {
+            const homeElement = document.getElementById('home-section');
+            if (homeElement) {
+                homeElement.classList.add('active');
+            }
+        }
+    }
+    
+    
+
 
   return (
-    <div className="navbar bg-base-100 sticky top-0 z-[2] shadow-md h-16 w-full  ">
+    <div className="navbar bg-base-100 fixed top-0 z-[2] shadow-md h-16 w-full  ">
         <div className="flex-1">
-            <a className="btn btn-ghost text-3xl bebasnue md:flex hidden " href='#pres'>Mohamed Amine Bahassou</a>
-            <a className="btn btn-ghost text-3xl bebasnue md:hidden flex " href='#pres'>Bahassou</a>
+            <a className="btn btn-ghost  " href='#pres'>
+                <img src={logo} alt="logo" width={45}/>
+            </a>
         </div>
         <div className="flex-none  ">
             <ul className="menu menu-horizontal px-1 teko text-lg font-bold md:flex hidden  ">
@@ -20,7 +67,7 @@ const NavBar = () => {
                     <details>
                     <summary>More</summary>
                     <ul className="bg-base-100 rounded-t-none p-2">
-                        <li><a>Blogs</a></li>
+                        <li onClick={handleBlog}><a>Blogs</a></li>
                     </ul>
                     </details>
                 </li>
@@ -28,7 +75,7 @@ const NavBar = () => {
 
             <label className="swap swap-rotate mx-4">
                 {/* this hidden checkbox controls the state */}
-                <input type="checkbox" className="theme-controller" value="light" />
+                <input type="checkbox" className="theme-controller" value="black" />
 
                 {/* sun icon */}
                 <svg
@@ -48,52 +95,34 @@ const NavBar = () => {
                     d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
                 </svg>
             </label>
+        </div>
 
-            <div>
-                <div className="drawer drawer-end md:hidden block" >
-                    <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
-                    <div className="drawer-content">
-                        {/* Page content here */}
-                        <label htmlFor="my-drawer-4" className="drawer-button btn  "> 
-                            <div >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    class="inline-block h-5 w-5 stroke-current">
-                                    <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
-                                </svg>
-                            </div>
-                        </label>
-                    </div>
-                    <div className="drawer-side">
-                        <label htmlFor="my-drawer-4" aria-label="close sidebar" className="drawer-overlay"></label>
-                        <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
-                        {/* Sidebar content here */}
-                        <li><a href='#skil'>Skills</a></li>
-                        <li><a href='#proj'>Projects</a></li>
-                        <li><a href='#cert'>Certifications</a></li>
-                        <li>
-                            <details>
-                            <summary>More</summary>
-                            <ul className=" rounded-t-none p-2">
-                                <li><a>Blogs</a></li>
-                            </ul>
-                            </details>
-                        </li>
-                        <li><a href='#cert'>Certifications</a></li>
 
-                        </ul>
-                    </div>
-                </div>
+        <div className="btm-nav md:hidden flex">
+            <a id='home-section' href='#' className="active" onClick={()=>handleClick("home")} >
+                <RiHome6Fill />
+                <h2>Home</h2>
+            </a>
+            <a id='skills-section' href='#skil' onClick={()=>handleClick("skills")} >
+                <IoSettings/>  
+                <h2>Skills</h2>
+            </a>
 
-            </div>
+            <a id='projects-section' href='#proj' onClick={()=>handleClick("projects")}>
+                <FaProjectDiagram/>
+                <h2>Projects</h2>
+            </a>
+            <a id='certifications-section' href='#cert' onClick={()=>handleClick("certifications")}>
+                <PiCertificateFill/>
+                <h2>Certifications</h2>
+            </a>
+            <button onClick={handleBlog}>
+                <FaNewspaper/>
+                <h2>Blogs</h2>
+            </button>
 
         </div>
+
     </div>
   )
 }
