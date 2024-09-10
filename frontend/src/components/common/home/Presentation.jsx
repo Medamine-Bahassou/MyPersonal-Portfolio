@@ -16,7 +16,7 @@ const Presentation = () => {
             <div>
             <h1 className="md:text-7xl text-5xl md:text-start text-center bebasnue">Mohamed Amine BAHASSOU</h1>
             <p className="py-6 text-xl md:text-start text-center abel font-medium">
-                Software Engineering Student
+                Software & AI Engineering Student
                 At the Faculty of Science and Technology.
             </p>
 

@@ -11,10 +11,10 @@ import { GrMysql } from "react-icons/gr";
 import { RiReactjsFill } from "react-icons/ri";
 
 import img1 from "../../../assets/projects/1.avif" 
-import img2 from "../../../assets/projects/2.gif" 
-import img3 from "../../../assets/projects/3.gif"
-import img4 from "../../../assets/projects/4.gif"
-import img5 from "../../../assets/projects/5.gif"
+import img2 from "../../../assets/projects/2.png" 
+import img3 from "../../../assets/projects/3.png"
+import img4 from "../../../assets/projects/4.png"
+import img5 from "../../../assets/projects/5.png"
 
 const Projects = () => {
 

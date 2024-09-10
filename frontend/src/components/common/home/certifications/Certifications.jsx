@@ -13,6 +13,7 @@ import certif1 from "../../../../assets/certifications/Certificat1.jpg"
 import certif2 from "../../../../assets/certifications/Certificat2.jpg"
 import certif4 from "../../../../assets/certifications/Certificat4.jpg"
 import certif3 from "../../../../assets/certifications/Certificat3.jpg"
+import certif5 from "../../../../assets/certifications/Certificat5.jpg"
 
 const Certifications = () => {
 
@@ -48,6 +49,13 @@ const Certifications = () => {
                 </>
             )    
         }
+        else if(e === 5){
+          return(
+              <>
+                <RiRobot2Line />    
+              </>
+          )    
+      }
     }
   
     
@@ -84,6 +92,13 @@ const Certifications = () => {
                 title={"React Basics"}
                 text={"Throughout the Advanced React course by Meta on Coursera, I deepened my understanding of advanced React concepts, including hooks, context, and performance optimization, and built a comprehensive skill set for developing sophisticated and efficient web applications."}
                 icons={certificate_skill(4)}
+                />
+
+            <Certification 
+                image={certif5}
+                title={"OCI AI Certified Foundations Associate"}
+                text={"In the OCI AI Certified Foundations Associate course, I learned the core concepts of Oracle Cloud Infrastructure and foundational AI services. I gained skills to design, implement, and manage AI solutions using OCI tools."}
+                icons={certificate_skill(5)}
                 />
         </div>
 

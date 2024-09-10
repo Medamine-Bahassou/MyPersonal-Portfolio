@@ -5,6 +5,8 @@ import Certifications from '../components/common/home/certifications/Certificati
 import Projects from '../components/common/projects/Projects';
 import "../App.css"
 import Education from '../components/common/home/educations/Educations';
+import Test from "../components/common/home/Test"
+
 const HomePage = () => {
 
    
@@ -30,6 +32,7 @@ const HomePage = () => {
         <Education />
       </div>
 
+    
     </div>
     </>
   )
