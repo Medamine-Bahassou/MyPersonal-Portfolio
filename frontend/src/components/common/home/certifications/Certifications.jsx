@@ -60,7 +60,7 @@ const Certifications = () => {
   
     
   return (
-    <div className='flex flex-col justify-center items-center container mx-auto px-4'>
+    <div className='flex flex-col justify-center items-center container mx-auto px-4 py-6'>
         <div className='text-6xl font-bold my-16  bebasnue '>
             Certifications 
         </div>

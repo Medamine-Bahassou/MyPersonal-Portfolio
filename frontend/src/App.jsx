@@ -16,11 +16,11 @@ function App() {
   });
 
   return (
-    <div className=' bg-base-200 min-h-screen w-full'>
+    <div className=' bg-base-100 min-h-screen w-full '>
       <Toaster />
       <NavBar />
       <motion.div className="fixed top-0 left-0 right-0 z-50 h-[5px] bg-slate-700 origin-top-left	 " style={{ scaleX }}  />  
-      <div className='max-w-6xl mx-auto w-full'>
+      <div className='max-w-4xl mx-auto w-full'>
         <Routes>
           <Route path='/' element={<HomePage />} />
         </Routes>

@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+* {
+    scrollbar-width:thin; /* Thin scrollbar */
+    scrollbar-color: rgb(0, 0, 0) transparent; /* Thumb color and transparent track */
+    scroll-snap-stop:normal;
+}

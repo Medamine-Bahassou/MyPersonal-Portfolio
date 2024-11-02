@@ -13,16 +13,18 @@ const HomePage = () => {
 
   return (
     <>
-    <div className="w-full  ">
 
-      <div id='pres'   >
+
+    <div className="w-full  divide-y divide-base-300  " >
+
+      <div id='pres' className='py-6'   >
         <Presentation />
       </div>
 
-      <div  id='skil'  >
+      <div  id='skil' className='py-6'  >
         <Skills />
       </div>
-      <div id='proj'>
+      <div id='proj' className='py-6'>
         <Projects />
       </div>
       <div id='cert'>
@@ -34,6 +36,7 @@ const HomePage = () => {
 
     
     </div>
+
     </>
   )
 }

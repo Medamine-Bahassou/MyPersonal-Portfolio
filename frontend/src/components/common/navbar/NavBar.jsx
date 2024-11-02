@@ -52,7 +52,9 @@ const NavBar = () => {
 
 
   return (
-    <div className="navbar bg-base-100 fixed top-0 z-[2] shadow-md h-16 w-full  ">
+    <div className='fixed top-0 z-[2] w-full'>
+    <div className=" md:px-32 navbar bg-base-100  shadow-md h-16 w-full backdrop-blur-xl bg-base-100/30   ">
+        
         <div className="flex-1">
             <a className="btn btn-ghost  " href='#pres'>
                 <img src={logo} alt="logo" width={45}/>
@@ -98,28 +100,31 @@ const NavBar = () => {
         </div>
 
 
-        <div className="btm-nav md:hidden flex">
-            <a id='home-section' href='#' className="active" onClick={()=>handleClick("home")} >
-                <RiHome6Fill />
-                <h2>Home</h2>
-            </a>
-            <a id='skills-section' href='#skil' onClick={()=>handleClick("skills")} >
-                <IoSettings/>  
-                <h2>Skills</h2>
-            </a>
 
-            <a id='projects-section' href='#proj' onClick={()=>handleClick("projects")}>
-                <FaProjectDiagram/>
-                <h2>Projects</h2>
-            </a>
-            <a id='certifications-section' href='#cert' onClick={()=>handleClick("certifications")}>
-                <PiCertificateFill/>
-                <h2>Certifications</h2>
-            </a>
-            <button onClick={handleBlog}>
-                <FaNewspaper/>
-                <h2>Blogs</h2>
-            </button>
+    </div>
+
+        <div className="btm-nav md:hidden flex">
+        <a id='home-section' href='#' className="active" onClick={()=>handleClick("home")} >
+            <RiHome6Fill />
+            <h2>Home</h2>
+        </a>
+        <a id='skills-section' href='#skil' onClick={()=>handleClick("skills")} >
+            <IoSettings/>  
+            <h2>Skills</h2>
+        </a>
+
+        <a id='projects-section' href='#proj' onClick={()=>handleClick("projects")}>
+            <FaProjectDiagram/>
+            <h2>Projects</h2>
+        </a>
+        <a id='certifications-section' href='#cert' onClick={()=>handleClick("certifications")}>
+            <PiCertificateFill/>
+            <h2>Certifications</h2>
+        </a>
+        <button onClick={handleBlog}>
+            <FaNewspaper/>
+            <h2>Blogs</h2>
+        </button>
 
         </div>
 
