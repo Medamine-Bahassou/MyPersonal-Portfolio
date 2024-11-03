@@ -9,13 +9,13 @@ import Test from "../components/common/home/Test"
 
 const HomePage = () => {
 
-   
 
   return (
     <>
 
 
-    <div className="w-full  divide-y divide-base-300  " >
+
+    <div  className="w-full  divide-y divide-base-300  " >
 
       <div id='pres' className='py-6'   >
         <Presentation />

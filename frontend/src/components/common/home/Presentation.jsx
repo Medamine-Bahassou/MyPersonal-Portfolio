@@ -2,6 +2,7 @@ import React from 'react'
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
+import lsi from "../../../assets/logo/lsi.webp";
 
 import photo from "../../../assets/logo/Photo.png"
 
@@ -12,7 +13,7 @@ const Presentation = () => {
         <div className="hero-content flex-col lg:flex-row-reverse md:gap-28 ">
             <img
             src={photo}
-            className="max-w-xs rounded-sm shadow-2xl " />
+            className="max-w-xs card  border border-base-200 hover:border-base-300 " />
             <div>
             <h1 className="md:text-7xl text-5xl md:text-start text-center bebasnue">Mohamed Amine BAHASSOU</h1>
             <p className="py-6 text-xl md:text-start text-center abel font-medium">

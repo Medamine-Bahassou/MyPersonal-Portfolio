@@ -11,7 +11,7 @@ const Project = ({title, description, image, icons}) => {
   return (
     <div>
 
-    <div onClick={() => handleModal()} className="card border border-base-200 bg-base-100 md:max-w-96 max-w-full shadow-xl min-w-1/3 hover:shadow-2xl cursor-pointer ">
+    <div onClick={() => handleModal()} className="card border border-base-200 hover:border-base-300 transition bg-base-100 md:max-w-96 max-w-full  min-w-1/3 cursor-pointer ">
         <figure>
             <img
             src={image}

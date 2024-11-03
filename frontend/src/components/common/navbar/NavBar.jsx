@@ -11,6 +11,8 @@ import { FaNewspaper } from "react-icons/fa6";
 const NavBar = () => {
 
 
+   
+
     const handleBlog = ()=>{
         toast('Comming soon ...', {
             icon: '📣',
@@ -77,7 +79,7 @@ const NavBar = () => {
 
             <label className="swap swap-rotate mx-4">
                 {/* this hidden checkbox controls the state */}
-                <input type="checkbox" className="theme-controller" value="black" />
+                <input type="checkbox" className="theme-controller" value="light" />
 
                 {/* sun icon */}
                 <svg

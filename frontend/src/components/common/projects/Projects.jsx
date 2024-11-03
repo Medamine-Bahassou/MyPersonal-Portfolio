@@ -11,6 +11,17 @@ import { GrMysql } from "react-icons/gr";
 import { RiReactjsFill } from "react-icons/ri";
 import { FaGithub } from "react-icons/fa";
 
+import "../../../App.css"
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper/modules';
+
+
+
 import img1 from "../../../assets/projects/1.avif";
 import img2 from "../../../assets/projects/2.png";
 import img3 from "../../../assets/projects/3.png";
@@ -45,11 +56,21 @@ const Projects = () => {
   ];
 
   const [selectedProject, setSelectedProject] = useState(projectsData);
+  const [img, setImg] = useState("");
  
   const openModal = (project) => {
     setSelectedProject(project);
     document.getElementById('project_modal').showModal();
   };
+
+  const openImgModal = (img) => {
+    setImg(img);
+    document.getElementById('img_modal').showModal();
+  };
+
+
+
+
   
   return (
     <div className='flex flex-col justify-center items-center container mx-auto'>
@@ -75,7 +96,26 @@ const Projects = () => {
           
           <div className="modal-box p-0   ">
             <figure>
-              <img src={selectedProject.image} alt="project" className="w-full h-full object-cover" />
+            
+            <Swiper
+              style={{
+                '--swiper-navigation-color': '#fff',
+                '--swiper-pagination-color': '#fff',
+              }}
+              navigation={true}
+              modules={[Navigation]}
+              className='h-52'
+            >
+                <SwiperSlide onClick={()=> openImgModal(selectedProject.image) } className='h-full flex justify-center items-center hover:cursor-pointer'>
+                    <img src={selectedProject.image} alt="project" className="w-full h-full object-cover" />
+                </SwiperSlide>
+                <SwiperSlide className='h-full flex justify-center items-center hover:cursor-pointer'>
+                  
+                    <img src={img2} alt="project" className="w-full h-full object-cover" />
+                </SwiperSlide>
+            </Swiper>
+
+
             </figure>
 
             <div className='p-5 '>
@@ -112,8 +152,20 @@ const Projects = () => {
           <form method="dialog" className="modal-backdrop">
             <button>close</button>
           </form>
+          <dialog id="img_modal" className="modal  ">
+            <div className="modal-box w-11/12 max-w-5xl p-0  ">
+              <img src={img}  className='w-full h-full' />
+            </div>
+            <form method="dialog" className="modal-backdrop">
+              <button>close</button>
+            </form>
+
+          </dialog>
         </dialog>
+        
       )}
+       
+
     </div>
   );
 };
