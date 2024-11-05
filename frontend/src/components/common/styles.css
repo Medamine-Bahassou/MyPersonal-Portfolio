@@ -1,0 +1,12 @@
+.parallax {
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+  }
+  
+  .scroller {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 2rem;
+  }
+  

@@ -31,6 +31,29 @@ html{
     font-family: teko
 }
 
+
+@font-face{
+    font-family: spicy ;
+    src: url(./fonts/SpicyRice-Regular.ttf);
+}
+
+.spicy {
+    font-family: spicy
+}
+
+
+
+@font-face{
+    font-family: rubik ;
+    src: url(./fonts/RubikMonoOne-Regular.ttf);
+}
+
+.rubik {
+    font-family: rubik
+}
+
+
+
 .parallax {
     overflow: hidden;
     letter-spacing: -2px;

@@ -74,7 +74,7 @@ const Projects = () => {
   
   return (
     <div className='flex flex-col justify-center items-center container mx-auto'>
-      <div className='text-6xl font-bold my-16 bebasnue'>Projects</div>
+      <div className='text-6xl font-bold my-16 bebasnue z-[1] '>Projects</div>
 
       <div className='md:grid md:grid-cols-3 gap-6 w-full flex flex-col md:justify-center'>
         {projectsData.map((project) => (

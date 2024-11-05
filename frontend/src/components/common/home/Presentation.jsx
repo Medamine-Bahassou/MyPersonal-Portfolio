@@ -9,7 +9,7 @@ import photo from "../../../assets/logo/Photo.png"
 const Presentation = () => {
   return (
     
-    <div className="flex flex-col justify-center min-h-screen overflow-auto pt-16 ">
+    <div className="flex flex-col justify-center min-h-screen overflow-auto  ">
         <div className="hero-content flex-col lg:flex-row-reverse md:gap-28 ">
             <img
             src={photo}

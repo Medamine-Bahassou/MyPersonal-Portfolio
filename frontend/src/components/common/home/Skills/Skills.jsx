@@ -4,8 +4,8 @@ import '../../../../App.css'
 
 const Skills = () => {
   return (
-    <div className='flex flex-col justify-center items-center'>
-        <div className='text-6xl font-bold   my-16  bebasnue '>
+    <div className='flex flex-col justify-center items-center '>
+        <div className='text-6xl font-bold   my-16  bebasnue z-[1] '>
             Skills 
         </div>
         <div className='  '>

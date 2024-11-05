@@ -54,7 +54,7 @@ const NavBar = () => {
 
 
   return (
-    <div className='fixed top-0 z-[2] w-full'>
+    <div className='fixed top-0 z-50 w-full'>
     <div className=" md:px-32 navbar bg-base-100  shadow-md h-16 w-full md:backdrop-blur-xl md:bg-base-100/30 bg-base-100/80   ">
         
         <div className="flex-1">
