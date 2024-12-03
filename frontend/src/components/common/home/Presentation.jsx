@@ -9,8 +9,8 @@ import photo from "../../../assets/logo/Photo.png"
 const Presentation = () => {
   return (
     
-    <div className="flex flex-col justify-center min-h-screen overflow-auto w-full ">
-        <div className="hero-content flex-col lg:flex-row-reverse md:gap-28 w-full ">
+    <div className="flex flex-col justify-center min-h-screen overflow-auto min-w-full ">
+        <div className="hero-content flex-col lg:flex-row-reverse md:gap-28 min-w-full ">
             <img
             src={photo}
             className="max-w-xs card  border border-base-200 hover:border-base-300 " />
