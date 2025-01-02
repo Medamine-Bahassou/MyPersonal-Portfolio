@@ -8,6 +8,7 @@ import ParallaxText from '../components/common/ParallaxText'; // Adjust path if 
 import "../App.css";
 import SmoothScroll from '../components/motion/SmoothScroll.component';
 import immg from './wallpaper.jpg'
+import ExperiencePage from '../components/common/home/experiences/ExperiencePage '
 
 const HomePage = () => {
   return (
@@ -43,6 +44,13 @@ const HomePage = () => {
         </div>
 
         <div id="cert" className="py-6   relative">
+          <div className='absolute top-0 left-0 right-0 bottom-0 ' />
+          <div className='relative z-20'>
+            <ExperiencePage />
+          </div>
+        </div>
+
+        <div id="cert" className="py-6   relative">
           <div className='absolute top-0 left-0 right-0 bottom-0 bg-base-100' />
           <div className='relative z-20'>
             <Certifications />
@@ -50,7 +58,7 @@ const HomePage = () => {
         </div>
 
         <div id="edu" className="py-6 relative">
-          <div className='absolute top-0 left-0 right-0 bottom-0 bg-base-100' />
+          <div className='absolute top-0 left-0 right-0 bottom-0 ' />
           <div className='relative z-20'>
             <Education />
           </div>

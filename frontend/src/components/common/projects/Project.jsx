@@ -1,46 +1,31 @@
-import React from 'react'
+import React from 'react';
 
-const Project = ({title, description, image, icons}) => {
-
-
-  const handleModal = () => {
-
-    document.getElementById('my_modal_2').showModal()
-
-  }
-  return (
-    <div>
-
-    <div onClick={() => handleModal()} className="card border border-base-200 hover:border-base-300 transition bg-base-100 md:max-w-96 max-w-full  min-w-1/3 cursor-pointer ">
-        <figure>
-            <img
-            src={image}
-            alt="project" />
-        </figure>
-        <div className="card-body abel">
-            <h2 className="card- teko text-3xl">{title}</h2>
-            <p>{description}</p>
-            <div className='flex gap-2 text-2xl'>
-                {icons}
+const Project = ({ title, description, image, icons, onClick }) => {
+    return (
+        <div
+            className="relative group card border border-base-200 bg-base-100 md:max-w-96 max-w-full min-w-1/3 overflow-hidden"
+        >
+            <figure className="relative overflow-hidden">
+                <img
+                    src={image}
+                    alt="project"
+                    className="transition-transform transform scale-100 group-hover:scale-110 duration-300 ease-in-out"
+                />
+                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300 ease-in-out"></div>
+            </figure>
+            <div className="card-body abel relative overflow-hidden">
+                <h2 className="card-title teko text-3xl relative z-10">{title}</h2>
+                <p className="relative z-10">{description}</p>
+                <div className="flex gap-2 text-2xl relative z-10">
+                   {icons}
+                </div>
+               <div className="absolute inset-0 bg-gradient-to-t from-transparent to-base-200 opacity-0 group-hover:opacity-30 transition-opacity duration-300 ease-in-out"></div>
             </div>
-
-        </div>
-        
-    </div>
-
-    {/* <dialog id="my_modal_2" className="modal">
-          <div className="modal-box">
-            <h3 className="font-bold text-lg">Hello!</h3>
-            <p className="py-4">Press ESC key or click outside to close</p>
+          <div className='card-actions justify-end p-4'>
+             <button onClick={onClick} className="btn btn-sm btn-primary">View Project</button>
           </div>
-          <form method="dialog" className="modal-backdrop">
-            <button>close</button>
-          </form>
-        </dialog> */}
+        </div>
+    );
+};
 
-    </div>
-    
-  )
-}
-
-export default Project
+export default Project;
