@@ -27,9 +27,18 @@ import 'swiper/css/navigation';
 
 import img1 from "../../../assets/projects/1/1.avif";
 import img2 from "../../../assets/projects/2/2.png";
+import img2_1 from "../../../assets/projects/2/2_1.png";
+import img2_2 from "../../../assets/projects/2/2_2.png";
+import img2_3 from "../../../assets/projects/2/2_3.png";
+import img2_4 from "../../../assets/projects/2/2_4.png";
 import img3 from "../../../assets/projects/3/3.png";
 import img4 from "../../../assets/projects/4/4.png";
+import img4_1 from "../../../assets/projects/4/4_1.png";
+import img4_2 from "../../../assets/projects/4/4_2.png";
+import img4_3 from "../../../assets/projects/4/4_3.png";
 import img5 from "../../../assets/projects/5/5.png";
+import img5_1 from "../../../assets/projects/5/5_1.png";
+import img5_2 from "../../../assets/projects/5/5_2.png";
 import img6 from "../../../assets/projects/6/6.webp";
 import img7 from "../../../assets/projects/7/7.png";
 import img7_1 from "../../../assets/projects/7/7_1.png"
@@ -51,10 +60,10 @@ const Projects = () => {
     
     const projectsData = [
       { id: 1, title: "Management of the Computer Engineering department", description: "A project for module C++ . In this project we are used Qt creator for generate multiple Interfaces. for more details you can click the button bellow.", image: img1, images: [img1], githubLink:"https://github.com/Medamine-Bahassou/Gestion-de-departement-genie-informaique-qt-creator" },
-      { id: 2, title: "Dungeon Loop", description: "This project is a 2D top-down game featuring procedural map generation, as well as pathfinding algorithms such as Dijkstra and A* (A star). The game provides an immersive experience with dynamically generated maps and challenging navigation scenarios.", image: img2, images: [img2], githubLink:"https://github.com/Medamine-Bahassou/Dungeon_Loop-Unity-Project-Procedural-Map-Generation-PathFinding" },
+      { id: 2, title: "Dungeon Loop", description: "This project is a 2D top-down game featuring procedural map generation, as well as pathfinding algorithms such as Dijkstra and A* (A star). The game provides an immersive experience with dynamically generated maps and challenging navigation scenarios.", image: img2, images: [img2, img2_1, img2_2, img2_3, img2_4], githubLink:"https://github.com/Medamine-Bahassou/Dungeon_Loop-Unity-Project-Procedural-Map-Generation-PathFinding" },
       { id: 3, title: "AFSTET Gaming Club Website", description: "Le site web du Club Gaming de la FSTT est une plateforme développée en utilisant les technologies PHP, JavaScript, HTML/CSS. Ce site offre une gamme de fonctionnalités permettant de gérer les actualités, les événements, les administrateurs, ainsi que les comptes utilisateurs (connexion et inscription).", image: img3, images: [img3], githubLink:"https://github.com/Medamine-Bahassou/Club_Gaming_FSTT_Website"  },
-      { id: 4, title: "MedShop E-Commerce website", description: "MedShop est un site E-Commerce développé avec Symfony et Bootstrap. Ce site a été réalisé par Mohamed Amine Bahassou. Il offre des fonctionnalités permettant d'ajouter, supprimer et modifier des produits ou des profils, ainsi que de gérer le panier d'achats et les commandes.", image: img4, images: [img4], githubLink:"https://github.com/Medamine-Bahassou/MedShop_E-Commerce-Website-Symfony"  },
-      { id: 5, title: "3ML", description: "Symfony React app Platform 3ML (عمل) for freelancers, Project that connect freelancers with tailored job opportunities based on their skills and preferences.", image: img5, images: [img5] , githubLink:"https://github.com/Medamine-Bahassou/Symfony-React-app-Platform-3ML" },
+      { id: 4, title: "MedShop E-Commerce website", description: "MedShop est un site E-Commerce développé avec Symfony et Bootstrap. Ce site a été réalisé par Mohamed Amine Bahassou. Il offre des fonctionnalités permettant d'ajouter, supprimer et modifier des produits ou des profils, ainsi que de gérer le panier d'achats et les commandes.", image: img4, images: [img4, img4_1, img4_2, img4_3], githubLink:"https://github.com/Medamine-Bahassou/MedShop_E-Commerce-Website-Symfony"  },
+      { id: 5, title: "3ML", description: "Symfony React app Platform 3ML (عمل) for freelancers, Project that connect freelancers with tailored job opportunities based on their skills and preferences.", image: img5, images: [img5, img5_1, img5_2] , githubLink:"https://github.com/Medamine-Bahassou/Symfony-React-app-Platform-3ML" },
       { id: 6, title: "X Clone", description: "A simplified clone of the social media platform X (formerly known as Twitter), developed for educational purposes. This project replicates core features like posting, following, and interacting with other users' posts.", image: img6, images: [img6], githubLink:"https://github.com/Medamine-Bahassou/x-clone-MERN-Stack", liveDemoLink: "https://x-clone-new.onrender.com/"},
       { id: 7, title: "Oracle Admin PRO", description: "Oracle Admin Pro is a web-based administration application designed to streamline database management tasks for Oracle databases. Built using Java EE (Spring Boot) for the backend and Angular for the frontend, this application aims to provide a user-friendly interface for key administrative operations.", image: img7, images: [img7, img7_1, img7_2], githubLink:"https://github.com/Medamine-Bahassou/Oracle-Project-" }
   ].reverse();
