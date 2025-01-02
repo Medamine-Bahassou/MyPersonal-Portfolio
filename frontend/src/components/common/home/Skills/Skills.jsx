@@ -46,11 +46,32 @@ const Skills = () => {
         { image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Matlab_Logo.png/1200px-Matlab_Logo.png", title: "MATLAB", group: "data" },
         { image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png", title: "Python", group: "data" },
         { image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2048px-Git_icon.svg.png", title: "Git/GitHub", group: "tools" },
-        { image: "https://static-00.iconduck.com/assets.00/symfony-icon-512x512-g7hivt0k.png", title: "Samphony", group: "backend" },
-        { image: "https://enzofilangi.fr/en/assets/images/programming-logos/UML.png", title: "UML", group: "tools" },
-        { image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png", title: "React", group: "frontend" },
+        { image: "https://static-00.iconduck.com/assets.00/symfony-icon-512x512-g7hivt0k.png", title: "Symfony", group: "backend" },
+            { image: "https://enzofilangi.fr/en/assets/images/programming-logos/UML.png", title: "UML", group: "tools" },
+            { image: "https://cdn.icon-icons.com/icons2/2108/PNG/512/mysql_icon_130966.png", title: "MySQL", group: "database" },
+        { image: "https://cdn-icons-png.flaticon.com/512/1006/1006559.png", title: "PostgreSQL", group: "database" },
+        { image: "https://cdn-icons-png.flaticon.com/512/919/919839.png", title: "SQL Server", group: "database" },
+       { image: "https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg", title: "MongoDB", group: "database" },
+        { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ81J-za89u1N45eVjIRJ-KhD4VfR3BQwIwjw&s", title: "Merise", group: "tools" },
+         { image: "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png", title: "React JS", group: "frontend" },
+        { image: "https://cdn.iconscout.com/icon/free/png-256/free-node-js-logo-icon-download-in-svg-png-gif-file-formats--nodejs-programming-language-pack-logos-icons-1174925.png?f=webp&w=256", title: "Node JS", group: "backend" },
+          { image: "https://lh5.googleusercontent.com/proxy/KTMTgxEwIkK5PtvXhl3qRBO_BB797q_ixPFFLP4lLCImNbufF5V6bRvVbBMHSuQ8rF4IiMBjIOW539IuELV-Ir5X7ppI40BUOkd4ytO87v9gDRIgWsm_UXt84aMVd_6v8_pPt_ZACSm-km9RlQ", title: "Express JS", group: "backend" },
+          { image: "https://perko.dev/images/angular-logo.png", title: "Angular", group: "frontend" },
+       { image: "https://v5.getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo-shadow.png", title: "Bootstrap", group: "frontend" },
+        { image: "https://www.svgrepo.com/show/374118/tailwind.svg", title: "TailwindCSS", group: "frontend" },
+            { image: "https://seeklogo.com/images/A/android-logo-7D3592038D-seeklogo.com.png", title: "Android", group: "mobile" },
+            { image: "https://cdn4.iconfinder.com/data/icons/file-formats-21/100/XML-512.png", title: "XML", group: "mobile" },
+        { image: "https://cdn.icon-icons.com/icons2/1156/PNG/512/1486565573-microsoft-office_81557.png", title: "Microsoft Office", group: "tools" },
+            { image: "https://img.icons8.com/?size=512&id=108792&format=png", title: "Windows", group: "tools" },
+        { image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1200px-Tux.svg.png", title: "Linux/Unix", group: "tools" },
+         { image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png", title: "Visual Studio Code", group: "tools" },
+        { image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Visual_Studio_Icon_2019.svg/2060px-Visual_Studio_Icon_2019.svg.png", title: "Visual Studio", group: "tools" },
+       { image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/800px-IntelliJ_IDEA_Icon.svg.png", title: "IntelliJ IDEA", group: "tools" },
+       { image: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/android-studio-icon.png", title: "Android Studio", group: "tools" },
+            { image: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png", title: "Docker", group: "tools" },
+    
+    
     ];
-
     const filteredSkills = activeGroup === 'all'
         ? skills
         : skills.filter(skill => skill.group === activeGroup);
