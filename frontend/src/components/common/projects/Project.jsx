@@ -15,7 +15,7 @@ const Project = ({ title, description, image, icons, onClick }) => {
             </figure>
             <div className="card-body abel relative overflow-hidden">
                 <h2 className="card-title teko text-3xl relative z-10">{title}</h2>
-                <p className="relative z-10">{description}</p>
+                <p className="relative z-10 max-h-60 overflow-hidden">{description.slice(0,400)}...</p>
                 <div className="flex gap-2 text-2xl relative z-10">
                    {icons}
                 </div>
