@@ -36,7 +36,7 @@ const Presentation = () => {
                 <a className=" btn btn-ghost text-2xl hover:text-yellow-600 tooltip tooltip-bottom flex items-center" data-tip="LeetCode"  href='https://leetcode.com/u/Medamine-Bahassou/' target='_blank'>
                     <SiLeetcode />
                 </a>
-                <a className=" btn btn-ghost text-2xl hover:text-yellow-600 tooltip tooltip-bottom flex items-center" data-tip="CV"  href='https://drive.google.com/file/d/1LEhgA0MVEDISgl06daSjHlZIDGswCMiJ/view?usp=sharing' target='_blank'>
+                <a className=" btn btn-ghost text-2xl hover:text-green-600 tooltip tooltip-bottom flex items-center" data-tip="CV"  href='https://drive.google.com/file/d/1LEhgA0MVEDISgl06daSjHlZIDGswCMiJ/view?usp=sharing' target='_blank'>
                     <SiReaddotcv />
                 </a>
                 
