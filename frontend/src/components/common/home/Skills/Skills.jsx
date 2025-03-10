@@ -50,6 +50,7 @@ const Skills = () => {
         { image: "https://static-00.iconduck.com/assets.00/symfony-icon-512x512-g7hivt0k.png", title: "Symfony", group: "backend" },
             { image: "https://enzofilangi.fr/en/assets/images/programming-logos/UML.png", title: "UML", group: "tools" },
             { image: "https://www.ideematic.com/wp-content/uploads/2018/02/mysql.png", title: "MySQL", group: "database" },
+            { image: "https://logos-world.net/wp-content/uploads/2020/09/Oracle-Symbol.png", title: "PLSql", group: "database" },
         { image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/800px-Postgresql_elephant.svg.png", title: "PostgreSQL", group: "database" },
         { image: "https://linube.com/blog/wp-content/uploads/sql-server-min.png", title: "SQL Server", group: "database" },
        { image: "https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg", title: "MongoDB", group: "database" },
