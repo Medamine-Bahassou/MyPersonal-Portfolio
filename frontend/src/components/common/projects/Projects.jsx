@@ -66,6 +66,11 @@ import img8_18 from "../../../assets/projects/8/8_18.png"; // Placeholder
 import img8_19 from "../../../assets/projects/8/8_19.png"; // Placeholder
 import img8_20 from "../../../assets/projects/8/8_20.png"; // Placeholder
 import img8_21 from "../../../assets/projects/8/8_21.png"; // Placeholder
+import img9 from "../../../assets/projects/9/9.png"; // Placeholder
+import img9_1 from "../../../assets/projects/9/9_1.png"; // Placeholder
+import img9_2 from "../../../assets/projects/9/9_2.png"; // Placeholder
+import img9_3 from "../../../assets/projects/9/9_3.png"; // Placeholder
+import img9_4 from "../../../assets/projects/9/9_4.png"; // Placeholder
 
 
 
@@ -79,6 +84,8 @@ const Projects = () => {
         case 5: return <><DiSymfony /><RiReactjsFill /><GrMysql /></>;
         case 6: return <><RiReactjsFill /><SiExpress/><SiMongodb/></>;
         case 7: return <><SiOracle /> <SiSpringboot/><FaAngular/><RiTailwindCssFill/><SiDaisyui/>  </>
+        case 8: return <><GrMysql /> <SiSpringboot/><FaAngular/><RiTailwindCssFill/><SiDaisyui/>  </>
+        case 9: return <><GrMysql /> <SiSpringboot/><FaAngular/><RiTailwindCssFill/><SiDaisyui/>  </>
         default: return null;
       }
     };
@@ -91,7 +98,11 @@ const Projects = () => {
       { id: 5, title: "3ML", description: "Symfony React app Platform 3ML (عمل) for freelancers, Project that connect freelancers with tailored job opportunities based on their skills and preferences.", image: img5, images: [img5, img5_1, img5_2] , githubLink:"https://github.com/Medamine-Bahassou/Symfony-React-app-Platform-3ML" },
       { id: 6, title: "X Clone", description: "A simplified clone of the social media platform X (formerly known as Twitter), developed for educational purposes. This project replicates core features like posting, following, and interacting with other users' posts.", image: img6, images: [img6], githubLink:"https://github.com/Medamine-Bahassou/x-clone-MERN-Stack", liveDemoLink: "https://x-clone-new.onrender.com/"},
       { id: 7, title: "Oracle Admin PRO", description: "Oracle Admin Pro is a web-based administration application designed to streamline database management tasks for Oracle databases. Built using Java EE (Spring Boot) for the backend and Angular for the frontend, this application aims to provide a user-friendly interface for key administrative operations.", image: img7, images: [img7, img7_1, img7_2], githubLink:"https://github.com/Medamine-Bahassou/Oracle-Project-" },
-      { id: 8, title: "FinTech Project", description: `Conception et développement d'une plateforme Fin-Tech complète avec architecture microservices robuste et technologies de pointe, offrant gestion de portefeuilles virtuels, transactions en ligne, modèle prédictif de risque de crédit (Machine Learning), prédiction de cours boursiers (apprentissage automatique), interface utilisateur conviviale (Angular), infrastructure Cloud automatisée (AWS, Terraform), et CI/CD (Jenkins, Kubernetes). Technologies: Spring Boot, Angular, Machine Learning, AWS, Terraform, Docker, Kubernetes, Jenkins, Grafana, Prometheus, Kafka, Eureka. Contributions: Conception et création des algorithmes de Machine Learning pour la prédiction du risque de crédit et des cours boursiers. Résultats: Acquisition de compétences approfondies en développement microservices, technologies Cloud et Machine Learning appliqué à la finance.`, image: img8, images: [img8, img8_1, img8_2, img8_3, img8_4, img8_5, img8_6, img8_7, img8_8, img8_9, img8_10, img8_11, img8_12, img8_13, img8_14, img8_15, img8_16, img8_17, img8_18, img8_19, img8_20, img8_21], githubLink:"https://github.com/Fintech-LSI" },  ].reverse();
+      { id: 8, title: "FinTech Project", description: `Conception et développement d'une plateforme Fin-Tech complète avec architecture microservices robuste et technologies de pointe, offrant gestion de portefeuilles virtuels, transactions en ligne, modèle prédictif de risque de crédit (Machine Learning), prédiction de cours boursiers (apprentissage automatique), interface utilisateur conviviale (Angular), infrastructure Cloud automatisée (AWS, Terraform), et CI/CD (Jenkins, Kubernetes). Technologies: Spring Boot, Angular, Machine Learning, AWS, Terraform, Docker, Kubernetes, Jenkins, Grafana, Prometheus, Kafka, Eureka. Contributions: Conception et création des algorithmes de Machine Learning pour la prédiction du risque de crédit et des cours boursiers. Résultats: Acquisition de compétences approfondies en développement microservices, technologies Cloud et Machine Learning appliqué à la finance.`, image: img8, images: [img8, img8_1, img8_2, img8_3, img8_4, img8_5, img8_6, img8_7, img8_8, img8_9, img8_10, img8_11, img8_12, img8_13, img8_14, img8_15, img8_16, img8_17, img8_18, img8_19, img8_20, img8_21], githubLink:"https://github.com/Fintech-LSI" },  
+      { id: 9, title: "Gestion Commercial", description: `Application gestion commercial - SpringBoot (Backend) & Angular (Frontend)`,image: img9, images: [img9_1, img9_2, img9_3,img9_4], githubLink:"https://github.com/Fintech-LSI" }, 
+
+    
+    ].reverse();
 
     const [selectedProject, setSelectedProject] = useState(null);
     const [img, setImg] = useState("");
