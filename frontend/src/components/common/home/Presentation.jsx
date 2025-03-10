@@ -5,7 +5,7 @@ import { FaFacebook } from "react-icons/fa";
 import lsi from "../../../assets/logo/lsi.webp";
 
 import photo from "../../../assets/logo/Photo.png"
-import { SiReaddotcv } from 'react-icons/si';
+import { SiLeetcode, SiReaddotcv } from 'react-icons/si';
 
 const Presentation = () => {
   return (
@@ -32,6 +32,9 @@ const Presentation = () => {
                 </a>
                 <a className="btn btn-ghost text-2xl hover:text-blue-600 tooltip tooltip-bottom flex items-center" data-tip="Facebook"  href='https://www.facebook.com/mohamedamine.bahassou.1/' target='_blank'>
                     <FaFacebook />
+                </a>
+                <a className=" btn btn-ghost text-2xl hover:text-yellow-600 tooltip tooltip-bottom flex items-center" data-tip="LeetCode"  href='https://leetcode.com/u/Medamine-Bahassou/' target='_blank'>
+                    <SiLeetcode />
                 </a>
                 <a className=" btn btn-ghost text-2xl hover:text-yellow-600 tooltip tooltip-bottom flex items-center" data-tip="CV"  href='https://drive.google.com/file/d/1LEhgA0MVEDISgl06daSjHlZIDGswCMiJ/view?usp=sharing' target='_blank'>
                     <SiReaddotcv />
