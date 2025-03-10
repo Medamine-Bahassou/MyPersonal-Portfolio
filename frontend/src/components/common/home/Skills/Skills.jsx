@@ -41,6 +41,7 @@ const Skills = () => {
         { image: "https://cdn-icons-png.flaticon.com/512/226/226777.png", title: "Java", group: "backend" },
         { image: "https://cdn-icons-png.flaticon.com/512/5968/5968332.png", title: "PHP", group: "backend" },
         { image: "https://cdn-icons-png.flaticon.com/512/6132/6132221.png", title: "C#", group: "backend" },
+        { image: "https://blog.zenika.com/wp-content/uploads/2016/04/spring-boot-logo-1.png", title: "Spring Boot", group: "backend" },
         { image: "https://cdn-icons-png.flaticon.com/512/5969/5969346.png", title: "Unity", group: "game" },
         { image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Qt_logo_2016.svg/1024px-Qt_logo_2016.svg.png", title: "Qt", group: "desktop" },
         { image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Matlab_Logo.png/1200px-Matlab_Logo.png", title: "MATLAB", group: "data" },
@@ -48,9 +49,9 @@ const Skills = () => {
         { image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2048px-Git_icon.svg.png", title: "Git/GitHub", group: "tools" },
         { image: "https://static-00.iconduck.com/assets.00/symfony-icon-512x512-g7hivt0k.png", title: "Symfony", group: "backend" },
             { image: "https://enzofilangi.fr/en/assets/images/programming-logos/UML.png", title: "UML", group: "tools" },
-            { image: "https://cdn.icon-icons.com/icons2/2108/PNG/512/mysql_icon_130966.png", title: "MySQL", group: "database" },
-        { image: "https://cdn-icons-png.flaticon.com/512/1006/1006559.png", title: "PostgreSQL", group: "database" },
-        { image: "https://cdn-icons-png.flaticon.com/512/919/919839.png", title: "SQL Server", group: "database" },
+            { image: "https://www.ideematic.com/wp-content/uploads/2018/02/mysql.png", title: "MySQL", group: "database" },
+        { image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/800px-Postgresql_elephant.svg.png", title: "PostgreSQL", group: "database" },
+        { image: "https://linube.com/blog/wp-content/uploads/sql-server-min.png", title: "SQL Server", group: "database" },
        { image: "https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg", title: "MongoDB", group: "database" },
         { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ81J-za89u1N45eVjIRJ-KhD4VfR3BQwIwjw&s", title: "Merise", group: "tools" },
          { image: "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png", title: "React JS", group: "frontend" },
@@ -59,15 +60,14 @@ const Skills = () => {
           { image: "https://perko.dev/images/angular-logo.png", title: "Angular", group: "frontend" },
        { image: "https://v5.getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo-shadow.png", title: "Bootstrap", group: "frontend" },
         { image: "https://www.svgrepo.com/show/374118/tailwind.svg", title: "TailwindCSS", group: "frontend" },
-            { image: "https://seeklogo.com/images/A/android-logo-7D3592038D-seeklogo.com.png", title: "Android", group: "mobile" },
-            { image: "https://cdn4.iconfinder.com/data/icons/file-formats-21/100/XML-512.png", title: "XML", group: "mobile" },
-        { image: "https://cdn.icon-icons.com/icons2/1156/PNG/512/1486565573-microsoft-office_81557.png", title: "Microsoft Office", group: "tools" },
+            { image: "https://static-00.iconduck.com/assets.00/xml-icon-1792x2048-mgs34nnd.png", title: "XML", group: "mobile" },
+        { image: "https://upload.wikimedia.org/wikipedia/commons/6/65/Microsoft_Office_logo_%282013%E2%80%932019%29.png", title: "Microsoft Office", group: "tools" },
             { image: "https://img.icons8.com/?size=512&id=108792&format=png", title: "Windows", group: "tools" },
         { image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1200px-Tux.svg.png", title: "Linux/Unix", group: "tools" },
          { image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png", title: "Visual Studio Code", group: "tools" },
         { image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Visual_Studio_Icon_2019.svg/2060px-Visual_Studio_Icon_2019.svg.png", title: "Visual Studio", group: "tools" },
        { image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/800px-IntelliJ_IDEA_Icon.svg.png", title: "IntelliJ IDEA", group: "tools" },
-       { image: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/android-studio-icon.png", title: "Android Studio", group: "tools" },
+       { image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Android_Studio_Logo_2024.svg/800px-Android_Studio_Logo_2024.svg.png", title: "Android Studio", group: "tools" },
             { image: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png", title: "Docker", group: "tools" },
     
     
@@ -124,11 +124,23 @@ const Skills = () => {
                 >
                    Desktop App
                 </button>
+                <button
+                    className={`btn btn-sm ${activeGroup === 'mobile' ? 'btn-active' : ''}`}
+                    onClick={() => handleGroupClick('mobile')}
+                >
+                   Mobile
+                </button>
                   <button
                     className={`btn btn-sm ${activeGroup === 'data' ? 'btn-active' : ''}`}
                     onClick={() => handleGroupClick('data')}
                 >
                      Data Science
+                  </button>
+                  <button
+                    className={`btn btn-sm ${activeGroup === 'database' ? 'btn-active' : ''}`}
+                    onClick={() => handleGroupClick('database')}
+                >
+                     Database
                   </button>
                   <button
                     className={`btn btn-sm ${activeGroup === 'tools' ? 'btn-active' : ''}`}
