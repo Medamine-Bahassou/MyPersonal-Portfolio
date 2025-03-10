@@ -151,7 +151,7 @@ const Skills = () => {
                 </div>
                 {!showAll && filteredSkills.length > 5 && (
                     <div className='flex justify-center mt-4'>
-                        <button className='btn btn-sm' onClick={handleShowMore}>
+                        <button className='btn btn-sm btn-success' onClick={handleShowMore}>
                            Show more
                         </button>
                     </div>

@@ -150,12 +150,12 @@ const Projects = () => {
               ))}
           </div>
            {!showMore && projectsData.length > 3 && (
-            <button className="btn btn-sm  mt-6" onClick={() => setShowMore(true)}>
+            <button className="btn btn-sm btn-success  mt-6" onClick={() => setShowMore(true)}>
                 Show More
             </button>
         )}
         {showMore && (
-            <button className="btn btn-sm mt-6" onClick={() => setShowMore(false)}>
+            <button className="btn btn-sm bg-red-500 mt-6" onClick={() => setShowMore(false)}>
                 Show Less
             </button>
         )}

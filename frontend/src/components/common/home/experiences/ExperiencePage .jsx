@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { FaDatabase } from 'react-icons/fa';
+import { FaDatabase, FaJava } from 'react-icons/fa';
 import { SiJquery, SiPostgresql } from 'react-icons/si';
-import { BsCalendarDate } from 'react-icons/bs'
+import { BsAndroid2, BsCalendarDate } from 'react-icons/bs'
 import megadev from '../../../../assets/experiences/megadev.png';
+import { TbFileTypeXml } from 'react-icons/tb';
+import { DiMsqlServer } from 'react-icons/di';
 
 const ExperiencePage = () => {
     const experiencesRef = useRef(null);
@@ -20,10 +22,10 @@ const ExperiencePage = () => {
     ]);
 
     const techIcons = {
-         'Java':  <SiJquery size={24} />,
-        'Android Studio':  <SiJquery size={24} />,
-        'XML':  <SiJquery size={24} />,
-        'SQL Server': <SiPostgresql size={24} />,
+        'Java':  <FaJava size={24} />,
+        'Android Studio':  <BsAndroid2 size={24} />,
+        'XML':  <TbFileTypeXml size={24} />,
+        'SQL Server': <DiMsqlServer size={24} />,
     };
     useEffect(() => {
         const observer = new IntersectionObserver(
