@@ -134,24 +134,30 @@ const Certifications = () => {
                 Certifications
             </h1>
 
-            <ParallaxText baseVelocity={-3}>
-                <div className='flex '>
-                    {certifications.map((certification) => (
+            <ParallaxText baseVelocity={3}>
+                <div  className="h-[200px] w-[1200px] flex items-center ">
+                    <div className='flex gap-5 items-center justify-center  '>
 
-                        <img
+                    {certifications.map((certification) => (
+                        
+                        <div className='w-full h-full'>
+                            <img
                             key={certification.id}
                             src={certification.image}
-                            alt={certification.title}
-                            style={{
-                                width: '800px',
-                                height: 'auto',
-                                marginRight: '10px',
-                                display: 'inline-block',
-                                cursor: 'pointer', // Indicate it's clickable
-                            }}
-                            onClick={() => openCertificateModal(certification)} // Open modal on click
-                            />
+                                alt={certification.title}
+                                style={{
+                                    width: '800px',
+                                    height: 'auto',
+                                    marginRight: '10px',
+                                    display: 'inline-block',
+                                    cursor: 'pointer', // Indicate it's clickable
+                                }}
+                                onClick={() => openCertificateModal(certification)} // Open modal on click
+                                className='min-h-full '
+                                />
+                        </div>
                     ))}
+                    </div>
                 </div>
             </ParallaxText>
 

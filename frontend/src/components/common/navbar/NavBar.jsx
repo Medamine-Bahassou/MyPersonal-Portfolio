@@ -67,14 +67,6 @@ const NavBar = () => {
                 <li><a href='#skil'>Skills</a></li>
                 <li><a href='#proj'>Projects</a></li>
                 <li><a href='#cert'>Certifications</a></li>
-                <li>
-                    <details>
-                    <summary>More</summary>
-                    <ul className="bg-base-100 rounded-t-none p-2">
-                        <li onClick={handleBlog}><a>Blogs</a></li>
-                    </ul>
-                    </details>
-                </li>
             </ul>
 
             <label className="swap swap-rotate mx-4">
