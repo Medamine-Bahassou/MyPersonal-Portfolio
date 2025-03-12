@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@motionone/utils": "^10.18.0",
+    "dompurify": "^3.2.4",
     "framer-motion": "^11.3.24",
+    "marked": "^15.0.7",
     "portfolio-v1.0": "file:..",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

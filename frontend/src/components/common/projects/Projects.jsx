@@ -185,7 +185,11 @@ const Projects = () => {
 
                               </Swiper>
                           </figure>
-                          <div className='p-5 md:w-1/2'>
+                          <div className='p-6 md:w-1/2'>
+                                <form method="dialog">
+                                    {/* if there is a button in form, it will close the modal */}
+                                    <button className="btn btn-sm  btn-circle btn-primary absolute right-2 top-2">✕</button>
+                                </form>
                               <h3 className="font-bold text-lg mt-4">{selectedProject.title}</h3>
                               <p className="py-4">{selectedProject.description}</p>
                               <div className="flex gap-2 text-2xl">
