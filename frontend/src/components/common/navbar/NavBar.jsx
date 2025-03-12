@@ -1,3 +1,4 @@
+// NavBar.js
 import React from 'react'
 import "../../../App.css"
 import logo from "../../../assets/logo/logo1.png"
@@ -7,11 +8,29 @@ import { RiHome6Fill  } from "react-icons/ri";
 import { IoSettings } from "react-icons/io5";
 import { PiCertificateFill } from "react-icons/pi";
 import { FaNewspaper } from "react-icons/fa6";
+import { PiStudentFill } from "react-icons/pi"; // Import Education Icon
+import { useState, useEffect, useRef, useCallback } from 'react';
 
 const NavBar = () => {
+    const [activeSection, setActiveSection] = useState('pres');
+    const blogButtonRef = useRef(null);
+    const homeButtonRef = useRef(null);
+    const skillsButtonRef = useRef(null);
+    const projectsButtonRef = useRef(null);
+    const certificationsButtonRef = useRef(null);
+    const experienceButtonRef = useRef(null);
+    const educationButtonRef = useRef(null); // Ref for Education Button
 
+    const sectionRefs = {
+        'pres': homeButtonRef,
+        'skil': skillsButtonRef,
+        'proj': projectsButtonRef,
+        'experience': experienceButtonRef, // experience
+        'certifications': certificationsButtonRef,
+        'education': educationButtonRef, // Ref for Education Button
+        'blog': blogButtonRef,
+    };
 
-   
 
     const handleBlog = ()=>{
         toast('Comming soon ...', {
@@ -20,60 +39,82 @@ const NavBar = () => {
     }
 
     const handleClick = (section) => {
-        // First, remove the "active" class from all elements that may have it
-        const allSections = document.querySelectorAll('.active');
-        allSections.forEach(el => el.classList.remove('active'));
-    
-        if (section === "projects") {
-            const projectElement = document.getElementById('projects-section');
-            if (projectElement) {
-                projectElement.classList.add('active');
+        setActiveSection(section);
+    };
+
+
+    const observeSections = useCallback(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const sectionId = entry.target.id;
+                        setActiveSection(sectionId.replace('-section', ''));
+                    }
+                });
+            },
+            {
+                threshold: 0.5,
             }
-        }
-        else if (section === "certifications") {
-            const certificationsElement = document.getElementById('certifications-section');
-            if (certificationsElement) {
-                certificationsElement.classList.add('active');
+        );
+
+        const sectionsToObserve = [
+            'pres-section',
+            'skil-section',
+            'proj-section',
+            'experience-section',
+            'certifications-section',
+            'education-section',
+        ];
+        sectionsToObserve.forEach(sectionId => {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                observer.observe(section);
             }
-        }
-        else if (section === "skills") {
-            const skillsElement = document.getElementById('skills-section');
-            if (skillsElement) {
-                skillsElement.classList.add('active');
+        });
+
+        return () => observer.disconnect();
+    }, [setActiveSection]);
+
+
+    useEffect(() => {
+        observeSections();
+    }, [observeSections]);
+
+
+    useEffect(() => {
+        Object.values(sectionRefs).forEach(ref => {
+            if (ref.current) {
+                ref.current.classList.remove('active');
             }
+        });
+
+        if (sectionRefs[activeSection] && sectionRefs[activeSection].current) {
+            sectionRefs[activeSection].current.classList.add('active');
         }
-        else if (section === "home") {
-            const homeElement = document.getElementById('home-section');
-            if (homeElement) {
-                homeElement.classList.add('active');
-            }
-        }
-    }
-    
-    
+    }, [activeSection, sectionRefs]);
 
 
   return (
     <div className='fixed top-0 z-50 w-full'>
     <div className=" md:px-32 navbar bg-base-100  shadow-md h-16 w-full md:backdrop-blur-xl md:bg-base-100/30 bg-base-100/80   ">
-        
+
         <div className="flex-1">
-            <a className="btn btn-ghost  " href='#pres'>
+            <a className="btn btn-ghost  " href='#pres-section'>
                 <img src={logo} alt="logo" width={45}/>
             </a>
         </div>
         <div className="flex-none  ">
             <ul className="menu menu-horizontal px-1 teko text-lg font-bold md:flex hidden  ">
-                <li><a href='#skil'>Skills</a></li>
-                <li><a href='#proj'>Projects</a></li>
-                <li><a href='#cert'>Certifications</a></li>
+                <li><a href='#skil-section'>Skills</a></li>
+                <li><a href='#proj-section'>Projects</a></li>
+                <li><a href='#experience-section'>Experience</a></li>
+                <li><a href='#certifications-section'>Certifications</a></li>
+                <li><a href='#education-section'>Education</a></li>
             </ul>
 
             <label className="swap swap-rotate mx-4">
-                {/* this hidden checkbox controls the state */}
                 <input type="checkbox" className="theme-controller" value="light" />
-
-                {/* sun icon */}
                 <svg
                     className="swap-off h-7 w-7 fill-current"
                     xmlns="http://www.w3.org/2000/svg"
@@ -81,8 +122,6 @@ const NavBar = () => {
                     <path
                     d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
                 </svg>
-
-                {/* moon icon */}
                 <svg
                     className="swap-on h-7 w-7 fill-current"
                     xmlns="http://www.w3.org/2000/svg"
@@ -92,36 +131,72 @@ const NavBar = () => {
                 </svg>
             </label>
         </div>
-
-
-
     </div>
 
-        <div className="btm-nav md:hidden flex">
-        <a id='home-section' href='#' className="active" onClick={()=>handleClick("home")} >
+        <div className="btm-nav md:hidden flex w-full">
+        <a
+            ref={homeButtonRef}
+            id='pres-section'
+            href='#pres-section'
+            className={`nav-item ${activeSection === 'pres' ? 'active' : ''}`}
+            onClick={() => handleClick('pres')}
+        >
             <RiHome6Fill />
             <h2>Home</h2>
         </a>
-        <a id='skills-section' href='#skil' onClick={()=>handleClick("skills")} >
-            <IoSettings/>  
+        <a
+             ref={skillsButtonRef}
+            id='skil-section'
+            href='#skil-section'
+            className={`nav-item ${activeSection === 'skil' ? 'active' : ''}`}
+            onClick={() => handleClick('skil')}
+        >
+            <IoSettings/>
             <h2>Skills</h2>
         </a>
 
-        <a id='projects-section' href='#proj' onClick={()=>handleClick("projects")}>
+        <a
+             ref={projectsButtonRef}
+            id='proj-section'
+            href='#proj-section'
+            className={`nav-item ${activeSection === 'proj' ? 'active' : ''}`}
+            onClick={() => handleClick('proj')}
+        >
             <FaProjectDiagram/>
             <h2>Projects</h2>
         </a>
-        <a id='certifications-section' href='#cert' onClick={()=>handleClick("certifications")}>
+        <a
+             ref={experienceButtonRef}
+            id='experience-section'
+            href='#experience-section'
+            className={`nav-item ${activeSection === 'experience' ? 'active' : ''}`}
+            onClick={() => handleClick('experience')}
+        >
+            <PiCertificateFill/> {/* Or a more suitable icon for experience */}
+            <h2>Experience</h2>
+        </a>
+        <a
+             ref={certificationsButtonRef}
+            id='certifications-section'
+            href='#certifications-section'
+            className={`nav-item ${activeSection === 'certifications' ? 'active' : ''}`}
+            onClick={() => handleClick('certifications')}
+        >
             <PiCertificateFill/>
             <h2>Certifications</h2>
         </a>
-        <button onClick={handleBlog}>
-            <FaNewspaper/>
-            <h2>Blogs</h2>
-        </button>
+        <a // Added Education Button
+            ref={educationButtonRef}
+            id='education-section'
+            href='#education-section'
+            className={`nav-item ${activeSection === 'education' ? 'active' : ''}`}
+            onClick={() => handleClick('education')}
+        >
+            <PiStudentFill/> {/* Education Icon */}
+            <h2>Education</h2>
+        </a>
 
         </div>
-
     </div>
   )
 }
