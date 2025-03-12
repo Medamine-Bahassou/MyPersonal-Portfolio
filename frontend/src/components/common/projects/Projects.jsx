@@ -89,7 +89,7 @@ const Projects = () => {
         default: return null;
       }
     };
-    
+
     const projectsData = [
       { id: 1, title: "Management of the Computer Engineering department", description: "A project for module C++ . In this project we are used Qt creator for generate multiple Interfaces. for more details you can click the button bellow.", image: img1, images: [img1], githubLink:"https://github.com/Medamine-Bahassou/Gestion-de-departement-genie-informaique-qt-creator" },
       { id: 2, title: "Dungeon Loop", description: "This project is a 2D top-down game featuring procedural map generation, as well as pathfinding algorithms such as Dijkstra and A* (A star). The game provides an immersive experience with dynamically generated maps and challenging navigation scenarios.", image: img2, images: [img2, img2_1, img2_2, img2_3, img2_4], githubLink:"https://github.com/Medamine-Bahassou/Dungeon_Loop-Unity-Project-Procedural-Map-Generation-PathFinding" },
@@ -98,10 +98,10 @@ const Projects = () => {
       { id: 5, title: "3ML", description: "Symfony React app Platform 3ML (عمل) for freelancers, Project that connect freelancers with tailored job opportunities based on their skills and preferences.", image: img5, images: [img5, img5_1, img5_2] , githubLink:"https://github.com/Medamine-Bahassou/Symfony-React-app-Platform-3ML" },
       { id: 6, title: "X Clone", description: "A simplified clone of the social media platform X (formerly known as Twitter), developed for educational purposes. This project replicates core features like posting, following, and interacting with other users' posts.", image: img6, images: [img6], githubLink:"https://github.com/Medamine-Bahassou/x-clone-MERN-Stack", liveDemoLink: "https://x-clone-new.onrender.com/"},
       { id: 7, title: "Oracle Admin PRO", description: "Oracle Admin Pro is a web-based administration application designed to streamline database management tasks for Oracle databases. Built using Java EE (Spring Boot) for the backend and Angular for the frontend, this application aims to provide a user-friendly interface for key administrative operations.", image: img7, images: [img7, img7_1, img7_2], githubLink:"https://github.com/Medamine-Bahassou/Oracle-Project-" },
-      { id: 8, title: "FinTech Project", description: `Conception et développement d'une plateforme Fin-Tech complète avec architecture microservices robuste et technologies de pointe, offrant gestion de portefeuilles virtuels, transactions en ligne, modèle prédictif de risque de crédit (Machine Learning), prédiction de cours boursiers (apprentissage automatique), interface utilisateur conviviale (Angular), infrastructure Cloud automatisée (AWS, Terraform), et CI/CD (Jenkins, Kubernetes). Technologies: Spring Boot, Angular, Machine Learning, AWS, Terraform, Docker, Kubernetes, Jenkins, Grafana, Prometheus, Kafka, Eureka. Contributions: Conception et création des algorithmes de Machine Learning pour la prédiction du risque de crédit et des cours boursiers. Résultats: Acquisition de compétences approfondies en développement microservices, technologies Cloud et Machine Learning appliqué à la finance.`, image: img8, images: [img8, img8_1, img8_2, img8_3, img8_4, img8_5, img8_6, img8_7, img8_8, img8_9, img8_10, img8_11, img8_12, img8_13, img8_14, img8_15, img8_16, img8_17, img8_18, img8_19, img8_20, img8_21], githubLink:"https://github.com/Fintech-LSI" },  
-      { id: 9, title: "Gestion Commercial", description: `Application gestion commercial - SpringBoot (Backend) & Angular (Frontend)`,image: img9, images: [img9_1, img9_2, img9_3,img9_4]}, 
+      { id: 8, title: "FinTech Project", description: `Conception et développement d'une plateforme Fin-Tech complète avec architecture microservices robuste et technologies de pointe, offrant gestion de portefeuilles virtuels, transactions en ligne, modèle prédictif de risque de crédit (Machine Learning), prédiction de cours boursiers (apprentissage automatique), interface utilisateur conviviale (Angular), infrastructure Cloud automatisée (AWS, Terraform), et CI/CD (Jenkins, Kubernetes). Technologies: Spring Boot, Angular, Machine Learning, AWS, Terraform, Docker, Kubernetes, Jenkins, Grafana, Prometheus, Kafka, Eureka. Contributions: Conception et création des algorithmes de Machine Learning pour la prédiction du risque de crédit et des cours boursiers. Résultats: Acquisition de compétences approfondies en développement microservices, technologies Cloud et Machine Learning appliqué à la finance.`, image: img8, images: [img8, img8_1, img8_2, img8_3, img8_4, img8_5, img8_6, img8_7, img8_8, img8_9, img8_10, img8_11, img8_12, img8_13, img8_14, img8_15, img8_16, img8_17, img8_18, img8_19, img8_20, img8_21], githubLink:"https://github.com/Fintech-LSI" },
+      { id: 9, title: "Gestion Commercial", description: `Application gestion commercial - SpringBoot (Backend) & Angular (Frontend)`,image: img9, images: [img9_1, img9_2, img9_3,img9_4]},
 
-    
+
     ].reverse();
 
     const [selectedProject, setSelectedProject] = useState(null);
@@ -164,7 +164,9 @@ const Projects = () => {
               <div className="modal-box p-0  md:flex md:flex-row  max-w-5xl w-11/12 ">
                   {selectedProject && (
                       <React.Fragment>
+
                           <figure className="md:w-1/2">
+
                               <Swiper
                                   style={{
                                       '--swiper-navigation-color': '#fff',
@@ -188,7 +190,7 @@ const Projects = () => {
                           <div className='p-6 md:w-1/2'>
                                 <form method="dialog">
                                     {/* if there is a button in form, it will close the modal */}
-                                    <button className="btn btn-sm  btn-circle btn-primary absolute right-2 top-2">✕</button>
+                                    <button className="btn btn-sm  btn-circle btn-primary absolute right-2 top-2 z-50">✕</button>
                                 </form>
                               <h3 className="font-bold text-lg mt-4">{selectedProject.title}</h3>
                               <p className="py-4">{selectedProject.description}</p>
@@ -200,13 +202,13 @@ const Projects = () => {
                                       <FaGithub/>
                                       GitHub
                                   </a>
-                                  
-                                  <a 
-                                    href={selectedProject.liveDemoLink} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
+
+                                  <a
+                                    href={selectedProject.liveDemoLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className={`btn btn-active text-red-600 w-full ${!selectedProject.liveDemoLink ? 'btn-disabled' : ''}`}
-                                     
+
                                     >
                                     <span className={`relative flex h-3 w-3 z-10`}>
                                         <span className={`absolute inline-flex h-full w-full rounded-full ${selectedProject.liveDemoLink ? 'animate-ping bg-red-400' : 'bg-gray-400'} opacity-75`}></span>
@@ -214,7 +216,7 @@ const Projects = () => {
                                     </span>
                                       Live
                                     </a>
-                               
+
                               </div>
                           </div>
                       </React.Fragment>
@@ -225,7 +227,10 @@ const Projects = () => {
               </form>
           </dialog>
           <dialog id="img_modal" className="modal" ref={imgModalRef}>
-              <div className="modal-box w-11/12 max-w-5xl p-0">
+              <div className="modal-box w-11/12 max-w-5xl p-0 relative"> {/* Added relative positioning */}
+                  <form method="dialog" className="absolute right-2 top-2 z-50"> {/* Positioned close button */}
+                      <button className="btn btn-sm  btn-circle btn-primary">✕</button>
+                  </form>
                   {img && <img src={img} className='w-full h-full' />}
               </div>
               <form method="dialog" className="modal-backdrop" onClick={closeImgModal}>
@@ -236,4 +241,4 @@ const Projects = () => {
     );
 };
 
-export default Projects;  
+export default Projects;
