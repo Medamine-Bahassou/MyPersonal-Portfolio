@@ -31,7 +31,7 @@ const HomePage = () => {
                 <img src={immg} alt='bg' className='w-full h-screen object-cover' />
                 <div className='absolute top-0 left-0 right-0 z-50 h-screen opacity-75 bg-base-100 origin-top-left' />
             </div>
-            <div className="w-full divide-y divide-base-300">
+            <div className="w-full  ">
                 <motion.div
                     id="pres-section"
                     className='py-6'
@@ -52,7 +52,7 @@ const HomePage = () => {
                     viewport={{ once: true }}
                 >
                     <div className='absolute  top-0 left-0 right-0 bottom-0 bg-gradient-to-b from-transparent from-5% via-base-100 via-30%  to-base-100 z-20'/>
-                    <section className='p-6 rubik'>
+                    {/* <section className='p-6 rubik'>
                         <motion.div
                             initial="hidden"
                             whileInView="visible"
@@ -70,7 +70,7 @@ const HomePage = () => {
                         >
                             <ParallaxText baseVelocity={3}>Explore My Work</ParallaxText>
                         </motion.div>
-                    </section>
+                    </section> */}
                     <div className="relative z-20">
                         <Skills />
                     </div>
@@ -130,7 +130,7 @@ const HomePage = () => {
                     viewport={{ once: true }}
                 >
                     <div className='absolute top-0 left-0 right-0 bottom-0 ' />
-                    <div className='relative z-20'>
+                    <div className='relative z-20' id='education-section'>
                         <Education />
                     </div>
                 </motion.div>

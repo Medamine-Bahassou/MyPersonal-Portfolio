@@ -20,8 +20,8 @@ const HorizontalScrollCarousel = () => {
     const targetRef = useRef(null);
 
     return (
-         <section ref={targetRef} className="relative  flex justify-center">
-             <div className="flex overflow-x-auto gap-8  py-6  max-w-7xl  ">
+         <section ref={targetRef} className="relative  flex justify-center ">
+             <div className="flex flex-wrap  flex justify-center overflow-x-auto gap-8  py-6  w-full ">
                  {cards.map((card) => {
                         return <Card card={card} key={card.id} />;
                     })}

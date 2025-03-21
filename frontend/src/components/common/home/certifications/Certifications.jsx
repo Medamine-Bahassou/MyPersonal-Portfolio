@@ -140,7 +140,7 @@ const Certifications = () => {
 
                     {certifications.map((certification) => (
                         
-                        <div className='w-full h-full'>
+                        <div className='w-full h-full'> 
                             <img
                             key={certification.id}
                             src={certification.image}
