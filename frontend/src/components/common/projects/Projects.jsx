@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import Project from './Project';
 import { SiQt } from "react-icons/si";
 import { TbBrandCpp } from "react-icons/tb";
-import { FaUnity } from "react-icons/fa";
+import { FaProjectDiagram, FaUnity } from "react-icons/fa";
 import { TbBrandCSharp } from "react-icons/tb";
 import { BiLogoPhp } from "react-icons/bi";
 import { RiBootstrapLine } from "react-icons/ri";
@@ -135,7 +135,12 @@ const Projects = () => {
         : projectsData.slice(0,3);
     return (
       <div className='flex flex-col justify-center items-center container mx-auto w-full'>
-          <div className='text-6xl font-bold my-16 bebasnue z-[1] '>Projects</div>
+            <div className='text-6xl font-bold my-16 bebasnue z-[1] '>
+                <div className='flex justify-center gap-4'>
+                    <FaProjectDiagram />
+                    Projects
+                </div>
+            </div>
 
           <div className='md:grid md:grid-cols-3 gap-6  flex flex-col md:justify-center'>
               {projectsToDisplay.map((project) => (

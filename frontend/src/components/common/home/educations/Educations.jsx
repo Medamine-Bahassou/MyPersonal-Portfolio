@@ -1,13 +1,17 @@
 // Education.js
 import React, { useRef } from "react";
 import Card from '../card/Card'; // Import the new Card component
+import { IoMdSchool } from "react-icons/io";
 
 const Education = () => {
     return (
         <div className=' '>
             <div className="flex flex-col items-center">
                 <div className='text-6xl font-bold my-16  bebasnue '>
-                    Educations
+                    <div className='flex justify-center gap-4'>
+                        <IoMdSchool />
+                        Educations
+                    </div>
                 </div>
             </div>
 

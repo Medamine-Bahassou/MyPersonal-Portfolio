@@ -6,6 +6,7 @@ import megadev from '../../../../assets/experiences/megadev.png';
 import { TbFileTypeXml } from 'react-icons/tb';
 import { DiMsqlServer } from 'react-icons/di';
 import { FaGithub } from 'react-icons/fa'; // Import Github icon if you want to add a link
+import { IoIosGitNetwork } from 'react-icons/io';
 
 const ExperiencePage = () => {
     const experiencesRef = useRef(null);
@@ -70,7 +71,10 @@ const ExperiencePage = () => {
     return (
         <div className="container mx-auto py-12 px-4 md:px-8 lg:px-16 " ref={experiencesRef}>
             <h1 className="text-6xl font-bold mb-8 text-center bebasnue ">
-                Experiences
+                <div className='flex justify-center gap-4'>
+                    <IoIosGitNetwork />
+                    Experiences
+                </div>
             </h1>
             <div
                 className={`space-y-8 md:space-y-10 ${

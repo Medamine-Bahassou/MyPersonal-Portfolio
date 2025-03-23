@@ -11,6 +11,7 @@ import certif3 from "../../../../assets/certifications/Certificat3.jpg";
 import certif4 from "../../../../assets/certifications/Certificat4.jpg";
 import certif5 from "../../../../assets/certifications/Certificat5.jpg";
 import ParallaxText from '../../ParallaxText';
+import { GrCertificate } from 'react-icons/gr';
 
 const Certifications = () => {
     const certificationsRef = useRef(null);
@@ -129,9 +130,12 @@ const Certifications = () => {
     }, []);
 
     return (
-        <div className="container mx-auto py-12 px-4 md:px-8 lg:px-16" ref={certificationsRef}>
+        <div className="container  min-w-full py-12  px-0   " ref={certificationsRef}>
             <h1 className="text-6xl font-bold mb-8 text-center bebasnue">
-                Certifications
+                <div className='flex justify-center gap-4'>
+                    <GrCertificate />
+                    Certifications
+                </div>
             </h1>
 
             <ParallaxText baseVelocity={3}>

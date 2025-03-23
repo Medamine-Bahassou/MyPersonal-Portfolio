@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import SkillType from './Skill';
 import '../../../../App.css';
 import { SiGithub, SiLeetcode } from 'react-icons/si';
+import { FaCode } from 'react-icons/fa';
 
 const Skills = () => {
     const skillsRef = useRef(null);
@@ -109,7 +110,12 @@ const Skills = () => {
             </div>
 
             <div className='text-6xl font-bold my-16 bebasnue z-[1] '>
-                Skills
+                
+                <div className='flex justify-center gap-4'>
+                    <FaCode />
+                    Skills
+                </div>
+
             </div>
 
             <div className="flex flex-wrap justify-center gap-2 mb-4">

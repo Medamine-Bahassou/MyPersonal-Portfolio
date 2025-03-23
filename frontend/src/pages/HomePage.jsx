@@ -84,7 +84,7 @@ const HomePage = () => {
                     variants={sectionVariants}
                     viewport={{ once: true }}
                 >
-                    <div className='absolute top-0 left-0 right-0 bottom-0 bg-base-100' />
+                    <div className='absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-tr from-[rgba(2,0,84,0.3)] from-5% via-base-100 via-30%  to-base-100 ' />
                     <div className='relative z-20'>
                         <Projects />
                     </div>
@@ -99,8 +99,8 @@ const HomePage = () => {
                         variants={sectionVariants}
                         viewport={{ once: true }}
                     >
-                        <div className='absolute top-0 left-0 right-0 bottom-0 ' />
-                        <div className='relative z-20'>
+                        <div className='absolute top-0 left-0 right-0 bottom-0  bg-gradient-to-br from-[rgba(2,0,84,0.3)] from-5% via-base-100 via-30%  to-base-100 ' />
+                        <div className='relative z-20 '>
                             <ExperiencePage />
                         </div>
                     </motion.div>
@@ -115,8 +115,8 @@ const HomePage = () => {
                     variants={sectionVariants}
                     viewport={{ once: true }}
                 >
-                    <div className='absolute top-0 left-0 right-0 bottom-0 bg-base-100' />
-                    <div className='relative z-20'>
+                    <div className='absolute top-0 left-0 right-0 bottom-0   bg-gradient-to-tl from-[rgba(2,0,84,0.3)] from-5% via-base-100 via-30%  to-base-100 ' />
+                    <div className='relative z-20 px-0'>
                         <Certifications />
                     </div>
                 </motion.div>
@@ -129,7 +129,7 @@ const HomePage = () => {
                     variants={sectionVariants}
                     viewport={{ once: true }}
                 >
-                    <div className='absolute top-0 left-0 right-0 bottom-0 ' />
+                    <div className='absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-bl from-[rgba(2,0,84,0.3)] from-5% via-base-100 via-30%  to-base-100 ' />
                     <div className='relative z-20' id='education-section'>
                         <Education />
                     </div>

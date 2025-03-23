@@ -12,10 +12,16 @@ const Presentation = () => {
     
     <div className="flex flex-col justify-center min-h-screen overflow-auto min-w-full ">
         <div className="hero-content flex-col lg:flex-row-reverse md:gap-28 min-w-full ">
-            <img
-                src={photo}
-                className="max-w-xs rounded-full shadow shadow-2xl shadow-gray-600 card  border border-base-200 hover:border-base-300 " 
-            />
+            
+            <span className={`relative flex  `}>
+                <span className={`absolute inline-flex h-full w-full rounded-full animate-[ping_2s_linear_infinite_1s] bg-base-300 opacity-75 z-[-10]`}></span>
+
+                <img
+                    src={photo}
+                    className="max-w-xs rounded-full shadow shadow-2xl shadow-gray-600 card  border border-base-200 hover:border-base-300 " 
+                    />
+            </span>
+
             <div>
             <h1 className="md:text-7xl text-5xl md:text-start text-center bebasnue">Mohamed Amine BAHASSOU</h1>
             <p className="py-6 text-xl md:text-start text-center abel font-medium">
