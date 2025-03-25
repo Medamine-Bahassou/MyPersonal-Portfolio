@@ -3,6 +3,7 @@ import SkillType from './Skill';
 import '../../../../App.css';
 import { SiGithub, SiLeetcode } from 'react-icons/si';
 import { FaCode } from 'react-icons/fa';
+import photo from "../../../../assets/logo/catman.png"
 
 const Skills = () => {
     const skillsRef = useRef(null);
@@ -93,21 +94,6 @@ const Skills = () => {
     return (
         <div className='flex flex-col justify-center items-center' ref={skillsRef}>
 
-            <div className='grid grid-cols-2 gap-4 py-8 '>
-                <div className='' align="center">
-                    <SiGithub className='pb-4 text-6xl opacity-40'/>
-                    <img className='select-none' src="https://github-readme-stats.vercel.app/api?username=medamine-bahassou&show_icons=true&theme=dark&border_radius=20&hide_border=true&card_width=500px&rank_icon=github" />
-
-                </div>
-
-
-                <div className=''  align="center">
-                    <SiLeetcode className='pb-4 text-6xl opacity-40'/>
-                    <img className='select-none' src="https://leetcard.jacoblin.cool/medamine-bahassou?border=0&radius=20" />
-
-                </div>
-
-            </div>
 
             <div className='text-6xl font-bold my-16 bebasnue z-[1] '>
                 

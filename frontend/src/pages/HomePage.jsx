@@ -11,6 +11,7 @@ import SmoothScroll from '../components/motion/SmoothScroll.component';
 import immg from './wallpaper.jpg';
 import ExperiencePage from '../components/common/home/experiences/ExperiencePage ';
 import { motion } from 'framer-motion';
+import Footer from '../components/common/footer/Footer';
 
 const HomePage = () => {
 
@@ -76,6 +77,22 @@ const HomePage = () => {
                     </div>
                 </motion.div>
 
+
+                <motion.div
+                    id="footer-section"
+                    className="py-6 relative"
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={sectionVariants}
+                    viewport={{ once: true }}
+                >
+                    <div className='absolute  top-0 left-0 right-0 bottom-0 bg-gradient-to-b   bg-base-100 z-20'/>
+                    <div className='relative z-20' id='footer-section'>
+                        <Footer />
+                    </div>
+                </motion.div>
+
+
                 <motion.div
                     id="proj-section"
                     className="py-6 relative "
@@ -89,6 +106,8 @@ const HomePage = () => {
                         <Projects />
                     </div>
                 </motion.div>
+
+                
 
                 <motion.div>
                     <motion.div
@@ -134,6 +153,8 @@ const HomePage = () => {
                         <Education />
                     </div>
                 </motion.div>
+
+
             </div>
         </>
     );

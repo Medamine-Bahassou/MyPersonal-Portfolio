@@ -18,8 +18,9 @@ const Presentation = () => {
 
                 <img
                     src={photo}
-                    className="max-w-xs rounded-full shadow shadow-2xl shadow-gray-600 card  border border-base-200 hover:border-base-300 " 
-                    />
+                    className="object-center max-w-xs rounded-full shadow shadow-2xl shadow-gray-600 card  border border-base-200 hover:border-base-300 " 
+                />
+                    
             </span>
 
             <div>
