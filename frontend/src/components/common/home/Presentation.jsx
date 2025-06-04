@@ -14,7 +14,6 @@ const Presentation = () => {
         <div className="hero-content flex-col lg:flex-row-reverse md:gap-28 min-w-full ">
             
             <span className={`relative flex  `}>
-                <span className={`absolute inline-flex h-full w-full rounded-full animate-[ping_2s_linear_infinite_1s] bg-base-300 opacity-75 z-[-10]`}></span>
 
                 <img
                     src={photo}
@@ -24,7 +23,7 @@ const Presentation = () => {
             </span>
 
             <div>
-            <h1 className="md:text-7xl text-5xl md:text-start text-center bebasnue">Mohamed Amine BAHASSOU</h1>
+            <h1 className="md:text-7xl text-5xl md:text-start text-center bebasnue"> Mohamed Amine BAHASSOU</h1>
             <p className="py-6 text-xl md:text-start text-center abel font-medium">
                 Software & AI Engineering Student
                 At the Faculty of Science and Technology.
@@ -44,7 +43,7 @@ const Presentation = () => {
                 <a className=" btn btn-ghost text-2xl hover:text-yellow-600 tooltip tooltip-bottom flex items-center" data-tip="LeetCode"  href='https://leetcode.com/u/Medamine-Bahassou/' target='_blank'>
                     <SiLeetcode />
                 </a>
-                <a className=" skeleton  btn btn-ghost text-2xl hover:text-green-600 tooltip tooltip-bottom flex items-center" data-tip="CV"  href='https://drive.google.com/file/d/1LEhgA0MVEDISgl06daSjHlZIDGswCMiJ/view?usp=sharing' target='_blank'>
+                <a className=" skeleton  btn btn-ghost text-2xl hover:text-green-600 tooltip tooltip-bottom flex items-center" data-tip="CV"  href='https://www.canva.com/design/DAGeDYgcrBk/OKnHlwhwF6UiJYGIFQQ-IA/view?utm_content=DAGeDYgcrBk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hd1ea83de39' target='_blank'>
                     <SiReaddotcv />
                 </a>
                 
